@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="do3()">Click Me</button>
+<p id="result" onmouseover="do3()" onmouseout="do4()"></p>
+<script>
+    // function do4(){
+    //     let result= prompt('Bạn có chắc chắn muốn xóa')
+    //     alert(result)
+    // }
+    function do3(){
+        // document.write("Chào mọi người");
+        document.getElementById("result").innerHTML="<span style='color: red'>Chào mọi người</span>";
+    }
+    function do4(){
+        document.getElementById("result").innerHTML="<span style='color: blue'>Chào mọi người</span>";
+    }
+</script>
+</body>
+</html>
