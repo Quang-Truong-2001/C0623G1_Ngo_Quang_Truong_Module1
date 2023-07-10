@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch case</title>
+</head>
+<body>
+<script>
+    // let brower=prompt("Enter brower name!");
+    // if (brower=='Edge'){
+    //     alert("You've got the Edge!");
+    // }else if (brower=='Chrome'||brower=='Safari'||brower=='Opera'){
+    //     alert('Ok we support these browers too');
+    // }else{
+    //     alert('We hope that this page looks ok!');
+    // }
+    let browser=prompt("Enter browser name!")
+    switch (browser){
+        case 'Edge':
+            alert("You've got the Edge!");
+            break;
+        case 'Chorme':
+        case 'Firefox':
+        case 'Safari':
+        case 'Opera':
+            alert('Okay we support these browers too');
+            break;
+        default:
+            alert('We hope that this page Tooks ok!');
+    }
+</script>
+</body>
+</html>
