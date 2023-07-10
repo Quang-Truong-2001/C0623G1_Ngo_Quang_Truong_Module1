@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại học lực</title>
+</head>
+<body>
+<script>
+  let kt=+prompt("Nhập điểm bài kiểm tra");
+  let gk=+prompt("Nhập điểm bài giữa kì");
+  let ck=+prompt("Nhập điểm bài kiểm cuối kì");
+  let tb=(kt+gk*2+ck*3)/6;
+  if (tb>=8){
+    document.write("Giỏi");
+  } else if (tb>=6.5){
+    document.write("Khá");
+  } else if (tb>=5){
+    document.write("Trung bình");
+  } else {
+    document.write("Yếu")
+  }
+</script>
+</body>
+</html>

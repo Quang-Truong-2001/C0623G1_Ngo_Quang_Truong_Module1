@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+<script>
+  let soKw=+prompt("Nhập số KW điện:");
+  let tongtien;
+  switch (true){
+    case soKw<=50:
+      tongtien=soKw*1.678;
+      break;
+    case soKw<=100:
+      tongtien=soKw*1.734;
+      break;
+    case soKw<=200:
+      tongtien=soKw*2.014;
+      break;
+    case soKw<=300:
+      tongtien=soKw*2.536;
+      break;
+    case soKw<=400:
+      tongtien=soKw*2.834;
+      break;
+    case soKw>=50:
+      tongtien=soKw*2.927;
+      break;
+  }
+  document.write(tongtien + " nghình đồng");
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi</title>
+</head>
+<body>
+<script>
+  let firstMoney=+prompt("Nhập số tiền ban đầu: ");
+  let month=+prompt("Nhập số tháng: ");
+  const lai=0.01;
+  let total;
+  if (firstMoney>0 && month >0){
+    total=firstMoney*Math.pow((1+lai/12),(month/12));
+    document.write("Tổng tiền sau " + month +  " tháng là " + total);
+  }
+</script>
+</body>
+</html>
