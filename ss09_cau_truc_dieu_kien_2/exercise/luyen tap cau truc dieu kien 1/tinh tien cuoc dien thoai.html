@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let minutes=+prompt("Nhập số phút: ");
+  let tongtien;
+  if (minutes<=3){
+    tongtien=minutes*2900;
+  } else {
+    tongtien=2900*3+(minutes-3)*5000;
+  }
+  document.write("Tiền cước điện thoại là: ", tongtien);
+</script>
+</body>
+</html>

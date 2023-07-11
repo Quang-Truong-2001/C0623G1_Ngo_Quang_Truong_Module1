@@ -8,12 +8,23 @@
 <script>
   let firstMoney=+prompt("Nhập số tiền ban đầu: ");
   let month=+prompt("Nhập số tháng: ");
-  const lai=0.01;
-  let total;
-  if (firstMoney>0 && month >0){
-    total=firstMoney*Math.pow((1+lai/12),(month/12));
-    document.write("Tổng tiền sau " + month +  " tháng là " + total);
+  let lai;
+  switch (true){
+      case month<=2:
+          lai=0.031;
+          break;
+      case month<=5:
+          lai=0.038;
+          break;
+      case month<=11:
+          lai=0.047;
+          break;
+      case month>=12:
+          lai=0.052;
+          break;
   }
+  let tienLai=firstMoney*(lai/12)*month;
+  document.write("Tiền lãi qua "+ month+ " tháng là: " + tienLai +" vnd");
 </script>
 </body>
 </html>
