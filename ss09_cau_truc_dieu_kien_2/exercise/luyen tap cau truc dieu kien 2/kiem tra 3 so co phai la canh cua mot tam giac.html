@@ -9,20 +9,8 @@
   let a=+prompt("Nhập sô thứ 1:");
   let b=+prompt("Nhập sô thứ 2:");
   let c=+prompt("Nhập sô thứ 3:");
-  if (a>0 && b>0 && c>0){
-    if ((a+b)>c){
-      if((b+c)>a){
-        if((a+c)>b){
+  if (a>0 && b>0 && c>0 && (a+b)>c && (b+c)>a && (a+c)>b ){
           document.write("3 số trên là cạnh của một tam giác");
-        } else {
-          document.write("3 số trên không phải là cạnh của một tam giác");
-        }
-      } else{
-        document.write("3 số trên không phải là cạnh của một tam giác");
-      }
-    }else{
-      document.write("3 số trên không phải là cạnh của một tam giác");
-    }
   }else{
     document.write("3 số trên không phải là cạnh của một tam giác");
   }
