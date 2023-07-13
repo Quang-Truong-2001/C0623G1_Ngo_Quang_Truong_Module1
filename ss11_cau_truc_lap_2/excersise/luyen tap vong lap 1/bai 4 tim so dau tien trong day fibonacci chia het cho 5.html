@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let soA=0, soB=1, soC, i;
+  for (i=0;i<5;i++){
+    soC=soA+soB;
+    soB=soA;
+    soA=soC;
+    if(soC%5===0){
+      document.write(soC +" là số đầu tiên trong bảng fibbonacci chia hết cho 5");
+    }
+  }
+</script>
+</body>
+</html>

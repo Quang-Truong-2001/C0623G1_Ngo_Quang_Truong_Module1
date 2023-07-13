@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let soA=0, soB=1, soC, i, tong=0;
+  for (i=0;i<21;i++){
+    soC=soA+soB;
+    soB=soA;
+    soA=soC;
+    tong=tong+soC;
+  }
+  document.write("Tổng 20 số đầu tiên là ", tong);
+</script>
+</body>
+</html>
