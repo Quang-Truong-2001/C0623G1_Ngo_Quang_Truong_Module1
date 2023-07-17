@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt("Nhập độ dài của mảng: ");
+    let numbers = [];
+    for (let i = 1; i <= length; i++) {
+        numbers[i] = +prompt("Nhập giá trị của phần tử");
+    }
+    for (let i = 1; i <= length; i++) {
+        if((numbers[i-1]%2===0) && (numbers[i]%2===0)){
+            document.write("-"+numbers[i]);
+        }
+        else {
+            document.write(numbers[i]);
+        }
+    }
+
+
+</script>
+</body>
+</html>

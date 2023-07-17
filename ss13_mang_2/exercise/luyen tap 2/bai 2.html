@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string=['c','s','c','2','6','1'];
+    let tam;
+    for (let i=0,j=string.length-1; i<j; i++, j--){
+        tam=string[i];
+        string[i]=string[j];
+        string[j]=tam;
+    }
+    for (let i = 0; i < string.length; i++) {
+        document.write(string[i]);
+    }
+</script>
+</body>
+</html>

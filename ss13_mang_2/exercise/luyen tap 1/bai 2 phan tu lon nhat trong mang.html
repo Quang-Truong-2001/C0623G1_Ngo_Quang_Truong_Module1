@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numbers = [4, 6, 8, 2, 11, 15, 40, 23, 42, 50];
+  let max = numbers[0]
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === max) {
+      document.write("Số lớn nhất là "+ max + " ở vị trí số " + i);
+    }
+  }
+</script>
+</body>
+</html>

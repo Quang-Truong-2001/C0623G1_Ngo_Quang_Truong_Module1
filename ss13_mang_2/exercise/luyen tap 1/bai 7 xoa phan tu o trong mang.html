@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [4, 6, 8, 2, 11, 15, 40, 23, 42, 50];
+    let phanTu = +prompt("Nhập số phần tử trong mảng:");
+    let count;
+    for (let i = 0; i < numbers.length; i++) {
+        if (phanTu === numbers[i]) {
+            count = i;
+        }
+    }
+    for (let i = count; i < numbers.length; i++) {
+        numbers[i] = numbers[i + 1];
+    }
+    numbers.length=numbers.length-1;
+    document.write(numbers);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang=[];
+    let count=0;
+    let length=+prompt("Nhập chiêu dài của mảng");
+    for (let i=0; i < length; i++){
+        mang[i]= prompt("Nhập ký tự");
+    }
+    for (let j=0; j < mang.length;j++){
+        if (mang[j]==0 || mang[j]%1==0){
+            count++;
+        }
+    }
+    document.write("Số lượng ký tự số trong mảng là " +count);
+</script>
+</body>
+</html>
