@@ -6,15 +6,14 @@
 </head>
 <body>
 <script>
-  let numbers = [-4, 6, -8, 2, -11, 15, 40, 23, 42, 1];
-  let count=0;
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] < 0) {
-      document.write(numbers[i] + "<br>");
-      count++;
+    let string = prompt("Nhập chuỗi:");
+    count=0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i]==="u"||string[i]==="e"||string[i]==="o"||string[i]==="a"||string[i]==="i"){
+            count++;
+        }
     }
-  }
-  document.write("Có " + count +" phần tử là số âm");
+    document.write("số nguyên âm là "+count)
 </script>
 </body>
 </html>

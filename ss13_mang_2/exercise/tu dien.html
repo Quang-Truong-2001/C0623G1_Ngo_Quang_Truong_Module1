@@ -14,16 +14,10 @@
         let english=["banana","apple","orange","pen","pencil"];
         let vietnamese=["chuối","táo","cam","bút","bút chì"];
         let dich=document.getElementById("dich").value;
-        let index_eng=0;
         let result="";
         for (let i=0; i< english.length; i++){
             if (dich === english[i]){
-                index_eng=i;
-                for (let j=0; j< vietnamese.length; j++){
-                    if (index_eng === j){
-                        result=vietnamese[j];
-                    }
-                }
+                result=vietnamese[i];
             }
         }
         document.getElementById("result").innerHTML=result;
