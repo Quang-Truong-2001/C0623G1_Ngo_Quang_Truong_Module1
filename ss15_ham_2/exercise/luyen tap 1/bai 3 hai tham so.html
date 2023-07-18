@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let thamSoMot = +prompt("Nhập tham số thứ nhất: ");
+  let thamSoHai = +prompt("Nhập tham số thứ hai: ");
+  soSanh(thamSoMot, thamSoHai);
+
+  function soSanh(thamSoMot, thamSoHai) {
+    if (thamSoMot > thamSoHai) {
+      document.write("Tham số thứ 1 lớn hơn tham số thứ 2");
+    } else {
+      let sum = thamSoMot + thamSoHai;
+      document.write("Tổng của 2 số là: " + sum);
+    }
+  }
+</script>
+</body>
+</html>

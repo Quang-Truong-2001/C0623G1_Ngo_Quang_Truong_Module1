@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang=[];
+    let length=+prompt("Nhập chiều dài của mảng:");
+    for (let i=0; i<length; i++ ){
+        mang[i]=+prompt("Nhập phần tử ở vị trí thứ "+i+" là:");
+    }
+    function daoNguoc(){
+        for (let i=0, j=mang.length-1; i < j; i++,j--){
+            let tam="";
+            tam=mang[i];
+            mang[i]=mang[j];
+            mang[j]=tam;
+        }
+        document.write(mang);
+    }
+    daoNguoc();
+</script>
+</body>
+</html>

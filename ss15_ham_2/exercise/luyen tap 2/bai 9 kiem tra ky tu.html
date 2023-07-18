@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  function check(){
+    let mang=[];
+    let length=prompt("Nhập chiều dài của mảng:");
+    for (let i=0;i<length;i++){
+      mang[i]=prompt("Nhập phần tử thứ "+i+" = ");
+    }
+    let kytu=prompt("Nhập ký tự cần tìm:");
+    let count=0;
+    for (let i=0;i<length;i++){
+      if (kytu==mang[i]){
+        count++;
+      }
+    }
+    if (count===0){
+      document.write("-1");
+    } else {
+      document.write("Số lần xuất hiện ký tự "+ count);
+    }
+  }
+  check();
+</script>
+</body>
+</html>

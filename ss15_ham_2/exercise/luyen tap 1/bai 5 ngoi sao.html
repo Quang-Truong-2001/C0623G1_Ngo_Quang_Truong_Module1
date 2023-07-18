@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let starOne=["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let starTwo=["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    let star=prompt("Nhập sao cần tìm:");
+    function findStar(star){
+        let result="";
+        for (let i=0; i< starOne.length; i++){
+            if (star===starOne[i]){
+                for (let j=0; j< starTwo.length; j++){
+                    if (i===j) {
+                        result = starTwo[j];
+                        return result;
+                    }
+                }
+            }
+        }
+    }
+
+    document.write(findStar(star));
+</script>
+</body>
+</html>

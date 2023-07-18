@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numberOne=+prompt("Nhập số thứ 1:");
+  let numberTwo=+prompt("Nhập số thứ 2:");
+  let numberThree=+prompt("Nhập số thứ 3:");
+  function nhap(numberOne, numberTwo, numberThree){
+    if ((numberOne > numberTwo) && (numberOne > numberThree)){
+      document.write( numberOne + " lớn nhất");
+    }
+    if ((numberTwo > numberOne) && (numberTwo > numberThree)){
+      document.write( numberTwo + " lớn nhất");
+    } else {
+      document.write( numberThree + " lớn nhất");
+    }
+  }
+  nhap(numberOne, numberTwo, numberThree);
+</script>
+</body>
+</html>
