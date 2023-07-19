@@ -13,12 +13,8 @@
         let result="";
         for (let i=0; i< starOne.length; i++){
             if (star===starOne[i]){
-                for (let j=0; j< starTwo.length; j++){
-                    if (i===j) {
-                        result = starTwo[j];
-                        return result;
-                    }
-                }
+                result = starTwo[i];
+                return result;
             }
         }
     }
