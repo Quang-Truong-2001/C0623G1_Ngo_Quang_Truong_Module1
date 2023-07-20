@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius) {
+            this.radius=radius;
+        }
+
+        area(){
+            let area = Math.PI*this.radius*this.radius;
+            document.write("Diện tích hình tròn là: "+area +"<br/>");
+        }
+
+        permeter(){
+            let permeter= 2* Math.PI*this.radius;
+            document.write("Chu vi hình tròn là: "+permeter);
+        }
+
+    }
+    let result= new Circle(6);
+    result.area();
+    result.permeter()
+</script>
+</body>
+</html>

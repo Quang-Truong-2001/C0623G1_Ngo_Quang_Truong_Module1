@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Mobile{
+    constructor(name, battery, draft, inbox, outbox, status){
+      this.name=name;
+      this.battery=battery;
+      this.draft=draft;
+      this.inbox=inbox;
+      this.outbox=outbox;
+      this.status=status;
+    }
+
+    checkStatus(){
+      if(this.status){
+        console.log(this. name, " đang bật"+"<br/>");
+      }
+        else{
+        console.log(this.name, " đang tắt"+"<br/>");
+      }
+      this.battery--;
+    }
+
+    turnOn(){
+      if(this.status){
+        document.write("Điện thoại đang bật"+"<br/>");
+      } else {
+        this.status=true;
+        this.battery--;
+      }
+    }
+
+    turnOff(){
+      if(!this.status){
+        console.log("Điện thoại đang tắt"+"<br/>");
+      } else {
+        this.status=false;
+        this.battery--;
+      }
+    }
+
+    setBattery(newBattery){
+      this.battery=newBattery;
+    }
+
+    setMessageDraft(message){
+      if(this.status){
+        this.draft.unshift(message);
+        this.battery--;
+      } else {
+        console.log("Need to turn on the phone to compose a message"+"<br/>")
+      }
+    }
+
+    sendMessage(message, otherMobile){
+      if(this.status){
+        this.outbox.unshift(message);
+        otherMobile.inbox.unshift(message);
+        this.battery--;
+      } else {
+        console.log(this.name, "Điện thoại đang tắt");
+      }
+    }
+  }
+
+  let nokia=new Mobile("Nokia", 50, [],[],[], false);
+  let iphone=new Mobile("Iphone", 80, [],[],[], false);
+
+  nokia.checkStatus();
+  iphone.checkStatus();
+  nokia.turnOn();
+  iphone.turnOn();
+  nokia.checkStatus();
+  iphone.checkStatus();
+  console.log(nokia.battery);
+  iphone.sendMessage("Hello", nokia);
+  iphone.sendMessage("Bạn đang ở đâu vậy?", nokia);
+  nokia.sendMessage("Mình đang ở Đà Nẵng", iphone);
+  console.log(nokia.inbox);
+  console.log(nokia.outbox);
+  iphone.setBattery(100);
+  nokia.setBattery(100);
+  console.log(iphone.battery);
+  console.log(iphone.battery);
+</script>
+</body>
+</html>
