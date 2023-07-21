@@ -5,41 +5,43 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="DemoCanvas" ></canvas>
+<canvas id="DemoCanvas"></canvas>
 <script>
-    class Rectange{
+    class Rectange {
         constructor(width, height) {
-            this.width=width;
-            this.height=height;
+            this.width = width;
+            this.height = height;
         }
 
-        setWidth (newWidth){
-            this.width=newWidth;
+        setWidth(newWidth) {
+            this.width = newWidth;
         }
 
-        setHeight (newHeight){
-            this.height=newHeight;
-        }
-        area (){
-            return this.width*this.height;
+        setHeight(newHeight) {
+            this.height = newHeight;
         }
 
-        perimeter (){
-            return 2*(this.width+this.height)
+        getArea() {
+            return this.width * this.height;
         }
 
-        draw (){
-            let canvas=document.getElementById("DemoCanvas");
-            let ctx=canvas.getContext('2d');
-            ctx.fillStyle='#1616e1';
-            ctx.fillRect(10,10,this.width, this.height);
+        getPerimeter() {
+            return 2 * (this.width + this.height)
+        }
+
+        draw() {
+            let canvas = document.getElementById("DemoCanvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#1616e1';
+            ctx.fillRect(10, 10, this.width, this.height);
         }
     }
-    let myRectangle=new Rectange(150, 70);
+
+    let myRectangle = new Rectange(150, 70);
     myRectangle.setWidth(400);
     myRectangle.setHeight(400);
-    document.write("chu vi hình chữ nhật là" + myRectangle.perimeter()+"<br/>");
-    document.write("Diện tich hình chữ nhật là" + myRectangle.area());
+    document.write("chu vi hình chữ nhật là" + myRectangle.getPerimeter() + "<br/>");
+    document.write("Diện tich hình chữ nhật là" + myRectangle.getArea());
     myRectangle.draw()
 </script>
 </body>

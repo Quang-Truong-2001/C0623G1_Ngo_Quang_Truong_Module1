@@ -7,20 +7,19 @@
 <body>
 <script>
   class Temperature{
-    celsius;
     constructor(celsius) {
       this.celsius=celsius;
     }
-    fahrenheit(){
+    convertToF(){
       return (9/5)*this.celsius+32;
     }
-    kelvins(){
-      return this.celsius+273.15
+    convertToK(){
+      return this.celsius+273.15;
     }
   }
   let temperature=new Temperature(25);
-  let my_fahrenheit=temperature.fahrenheit();
-  let my_kelvins=temperature.kelvins();
+  let my_fahrenheit=temperature.convertToF();
+  let my_kelvins=temperature.convertToK();
   document.write("Nhiệt độ K = "+my_kelvins+"<br/>")
   document.write("Nhiệt độ F = "+my_fahrenheit+"<br/>")
 </script>
