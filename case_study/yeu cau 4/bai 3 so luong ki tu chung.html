@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let str1="aabcc";
+  let str2="adcaa";
+  function chung(str) {
+      let arr = str.split("");
+      let arr2 = arr.sort();
+      let arr3 = [];
+      for (let i = 0; i < arr2.length; i++) {
+          if (arr2[i] !== arr2[i + 1]) {
+              arr3.push(arr2[i]);
+          }
+      }
+      return arr3;
+  }
+  mang1=chung(str1);
+  mang2=chung(str2);
+  let mang3=[];
+  let count=0
+  for(let i=0; i<mang1.length; i++){
+      for (let j=0; j<mang2.length; j++){
+          if (mang1[i]===mang2[j]){
+              mang3.push(mang1[i]);
+              count++;
+          }
+      }
+  }
+  document.write("Có "+ count + " ký tự giống nhau là " + mang3);
+
+
+</script>
+</body>
+</html>

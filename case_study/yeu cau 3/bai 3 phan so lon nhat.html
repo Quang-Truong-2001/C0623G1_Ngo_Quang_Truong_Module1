@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let tu=[5,2,5];
+  let mau=[6,3,4];
+  let phanSo=[];
+  for (let i=0; i<tu.length; i++){
+    phanSo.push(tu[i]/mau[i]);
+  }
+  let max=phanSo[0];
+  for (let i=1;i<phanSo.length;i++){
+    if(phanSo[i]>max){
+      max=phanSo[i];
+    }
+  }
+  for (let i=1;i<phanSo.length;i++){
+    if(phanSo[i]===max){
+      document.write(tu[i] +"/"+mau[i] +" là phân số lớn nhất có chỉ số là "+i);
+    }
+  }
+</script>
+</body>
+</html>

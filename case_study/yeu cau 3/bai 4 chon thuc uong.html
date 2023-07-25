@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = 0;
+    let order;
+    do {
+        order = +prompt("Menu \n 1: Cafe \n 2:Cam vắt \n 3: Nước ép cà rốt \n 4: Nước ép cà chua \n 5: Nước lọc \n 6: Nước dừa \n 7: Cancel ");
+        let number = 0;
+        if (order === 7) {
+            alert("Bạn muốn kết thúc quá trình đặt nước uống ? ");
+            alert("Số tiền bạn cần thanh toán là: " + total + "đ");
+        }
+        if (order > 7) {
+            alert("Bạn nhập sai")
+        }
+        switch (order) {
+            case 1:
+                number = +prompt("Cafe với số lượng");
+                total += number * 15000;
+                break;
+
+            case 2:
+                number = +prompt("Cam vắt với số lượng");
+                total += number * 25000;
+                break;
+
+            case 3:
+                number = +prompt("Nước ép cà rốt với số lượng");
+                total += number * 25000;
+                break;
+
+            case 4:
+                number = +prompt("Nước ép cà chua với số lượng");
+                total += number * 25000;
+                break;
+
+            case 5:
+                number = +prompt("Nước lọc với số lượng");
+                total += number * 5000;
+                break;
+
+            case 6:
+                number = +prompt("Nước dừa với số lượng");
+                total += number * 35000;
+                break;
+        }
+    }
+    while (order < 7);
+</script>
+</body>
+</html>

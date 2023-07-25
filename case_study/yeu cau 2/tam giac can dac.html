@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let heigth = +prompt("Nhập chiều cao hình tam giác muốn vẽ:");
+    for (let i = 1; i <= heigth; i++) {
+        for (let k = heigth; k > i; k--) {
+            document.write("&nbsp");
+        }
+        for (let j = 1; j <= i; j++) {
+                document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

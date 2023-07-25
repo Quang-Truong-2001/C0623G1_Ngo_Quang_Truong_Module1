@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1=[7,2,5,3,5,3,9];
+    let arr2=[7,2,5,4,6,3,5,3,9];
+    let arr3=[];
+    function general(arr) {
+        let arr2 = arr.sort();
+        let arr3 = [];
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr2[i] !== arr2[i + 1]) {
+                arr3.push(arr2[i]);
+            }
+        }
+        return arr3;
+    }
+    arrOne=general(arr1);
+    arrTwo=general(arr2);
+    let arrThree=[];
+    let count=0
+    for(let i=0; i<arrOne.length; i++){
+        for (let j=0; j<arrTwo.length; j++){
+            if (arrOne[i]===arrTwo[j]){
+                arrThree.push(arrOne[i]);
+                count++;
+            }
+        }
+    }
+    document.write("Có "+ count + " số giống nhau là " + arrThree);
+
+</script>
+</body>
+</html>
