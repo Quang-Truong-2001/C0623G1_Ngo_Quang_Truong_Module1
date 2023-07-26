@@ -6,33 +6,26 @@
 </head>
 <body>
 <script>
-    let arr1=[7,2,5,3,5,3,9];
-    let arr2=[7,2,5,4,6,3,5,3,9];
-    let arr3=[];
-    function general(arr) {
-        let arr2 = arr.sort();
-        let arr3 = [];
-        for (let i = 0; i < arr2.length; i++) {
-            if (arr2[i] !== arr2[i + 1]) {
-                arr3.push(arr2[i]);
+    let arr1=[20,7,2,5,3,5,3,9,11];
+    let arr2=[10,7,2,5,4,6,3,5,3,9];
+    let arrDif=[];
+    function dif(arr1,arr2){
+        for (let i=0;i<arr1.length;i++){
+            let count=0;
+            for(let j=0;j<arr2.length;j++){
+                if(arr1[i]!==arr2[j]){
+                    count++;
+                }
+            }
+            if (count===arr2.length){
+                arrDif.push(arr1[i]);
             }
         }
-        return arr3;
+        return arrDif;
     }
-    arrOne=general(arr1);
-    arrTwo=general(arr2);
-    let arrThree=[];
-    let count=0
-    for(let i=0; i<arrOne.length; i++){
-        for (let j=0; j<arrTwo.length; j++){
-            if (arrOne[i]===arrTwo[j]){
-                arrThree.push(arrOne[i]);
-                count++;
-            }
-        }
-    }
-    document.write("Có "+ count + " số giống nhau là " + arrThree);
-
+    dif(arr1,arr2);
+    dif(arr2,arr1);
+    document.write(arrDif);
 </script>
 </body>
 </html>
