@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
-  let str="TRuong TaN HAI";
-  let str2=str.toLowerCase();
+  let str="     TRuong TaN             HAI";
+  let str1=str.toLowerCase();
   //truong tan hai
   function firstWord(){
+      let str2=str1.trim();
       let arr=str2.split("");
       arr[0]=arr[0].toUpperCase();
       for(let i=1; i< arr.length;i++){
@@ -17,13 +18,20 @@
               arr[i]=arr[i].toUpperCase();
           }
       }
+      for(let i=0; i< arr.length;i++){
+          if((arr[i-1]===" ")&&(arr[i]===" ")){
+              arr.splice(i-1,1);
+              i--;
+          }
+      }
+
       for (let i = 0; i < arr.length ; i++) {
           document.write(arr[i]);
       }
   }
 
   function lengthWord(){
-      let arr2=str2.split(" ");
+      let arr2=str1.split(" ");
       let maxLength=0;
       for (let i=0;i <arr2.length;i++){
           if(arr2[i].length>maxLength){
@@ -40,6 +48,7 @@
   firstWord();
   document.write("<br/>");
   lengthWord();
+
 </script>
 </body>
 </html>
