@@ -7,7 +7,7 @@
 <body>
 <script>
     let arr1=[20,7,2,5,3,5,3,9,11];
-    let arr2=[10,7,2,5,4,6,3,5,3,9];
+    let arr2=[10,7,2,5,4,6,6,3,5,3,9,6,6,6,6,6,6];
     let arrDif=[];
     function dif(arr1,arr2){
         for (let i=0;i<arr1.length;i++){
@@ -23,8 +23,16 @@
         }
         return arrDif;
     }
-    dif(arr1,arr2);
     dif(arr2,arr1);
+    arrDif=arrDif.sort(function (a,b){
+        return a-b
+    })
+    for(let i=1;i<arrDif.length;i++){
+        if(arrDif[i]===arrDif[i-1]){
+            arrDif.splice(i-1,1);
+            i--;
+        }
+    }
     document.write(arrDif);
 </script>
 </body>

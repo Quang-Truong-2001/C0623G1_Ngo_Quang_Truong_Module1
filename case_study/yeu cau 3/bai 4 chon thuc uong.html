@@ -6,51 +6,30 @@
 </head>
 <body>
 <script>
-    let total = 0;
-    let order;
+    let drinks=[1,2,3,4,5,6];
+    let price=[5000,10000,8000,5000,8000,5000];
+    let name=["cafe","Cam vắt","Nước cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"]
+    let total=0;
     do {
-        order = +prompt("Menu \n 1: Cafe \n 2:Cam vắt \n 3: Nước ép cà rốt \n 4: Nước ép cà chua \n 5: Nước lọc \n 6: Nước dừa \n 7: Cancel ");
-        let number = 0;
-        if (order === 7) {
-            alert("Bạn muốn kết thúc quá trình đặt nước uống ? ");
-            alert("Số tiền bạn cần thanh toán là: " + total + "đ");
+        let sum=0;
+        let order = +prompt("Menu \n 1: Cafe \n 2:Cam vắt \n 3: Nước ép cà rốt \n 4: Nước ép cà chua \n 5: Nước lọc \n 6: Nước dừa \n 7: Cancel ");
+        for (let i=0;i<drinks.length;i++){
+            if (order===i){
+                let amount=+prompt( name[i]+" có giá tiền "+price[i]+" với số lượng:");
+                sum=price[i]*amount;
+            }
         }
-        if (order > 7) {
-            alert("Bạn nhập sai")
+        total=total+sum;
+        if (order === 7){
+            alert("Cảm ơn bạn đã order");
+            alert("Tổng tiền là "  + total);
+            break;
         }
-        switch (order) {
-            case 1:
-                number = +prompt("Cafe 15000đ với số lượng");
-                total += number * 15000;
-                break;
-
-            case 2:
-                number = +prompt("Cam vắt 25000đ với số lượng");
-                total += number * 25000;
-                break;
-
-            case 3:
-                number = +prompt("Nước ép cà rốt 25000đ với số lượng");
-                total += number * 25000;
-                break;
-
-            case 4:
-                number = +prompt("Nước ép cà chua 25000đ với số lượng");
-                total += number * 25000;
-                break;
-
-            case 5:
-                number = +prompt("Nước lọc 5000đ với số lượng");
-                total += number * 5000;
-                break;
-
-            case 6:
-                number = +prompt("Nước dừa 35000đ với số lượng");
-                total += number * 35000;
-                break;
+        if (order < 1 || order > 7){
+            alert("Bạn nhập sai vui lòng nhập lại");
         }
     }
-    while (order < 7);
+    while (true);
 </script>
 </body>
 </html>

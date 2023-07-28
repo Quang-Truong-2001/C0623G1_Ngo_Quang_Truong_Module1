@@ -8,21 +8,15 @@
 <script>
   let tu=[5,2,5];
   let mau=[6,3,4];
-  let phanSo=[];
-  for (let i=0; i<tu.length; i++){
-    phanSo.push(tu[i]/mau[i]);
+  let max=tu[0]/mau[0];
+  let maxIndex=0;
+  for(let i=1;i<tu.length;i++){
+      if(max<tu[i]/mau[i]){
+          max=tu[i]/mau[i];
+          maxIndex=i;
+      }
   }
-  let max=phanSo[0];
-  for (let i=1;i<phanSo.length;i++){
-    if(phanSo[i]>max){
-      max=phanSo[i];
-    }
-  }
-  for (let i=1;i<phanSo.length;i++){
-    if(phanSo[i]===max){
-      document.write(tu[i] +"/"+mau[i] +" là phân số lớn nhất có chỉ số là "+ i);
-    }
-  }
+  document.write("Phân số lớn nhất là " + tu[maxIndex]+"/"+mau[maxIndex]+" có chỉ số là "+ maxIndex)
 </script>
 </body>
 </html>
